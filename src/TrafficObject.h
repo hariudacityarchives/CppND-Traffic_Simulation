@@ -5,11 +5,13 @@
 #include <thread>
 #include <vector>
 
-enum ObjectType {
-  noObject,
-  objectVehicle,
-  objectIntersection,
-  objectStreet,
+enum ObjectType
+{
+    noObject,
+    objectVehicle,
+    objectIntersection,
+    objectStreet,
+    objectTrafficLight,
 };
 
 class TrafficObject {
