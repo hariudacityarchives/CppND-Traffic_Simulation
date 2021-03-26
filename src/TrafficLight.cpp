@@ -3,7 +3,7 @@
 #include <random>
 
 /* Implementation of class "MessageQueue" */
-/*
+
 template <typename T> T MessageQueue<T>::receive() {
   // FP.5a : The method receive should use std::unique_lock<std::mutex> and
   // _condition.wait() to wait for and receive new messages and pull them from
@@ -28,18 +28,14 @@ template <typename T> void MessageQueue<T>::send(T &&msg) {
   // std::lock_guard<std::mutex> as well as _condition.notify_one() to add a new
   // message to the queue and afterwards send a notification.
   // simulate some work
-  std::this_thread::sleep_for(std::chrono::milliseconds(100));
-
   // perform vector modification under the lock
   std::lock_guard<std::mutex> uLock(_mutex);
 
   // add vector to queue
-  std::cout << "   Message " << msg << " has been sent to the queue"
-            << std::endl;
+  std::cout << "Message added to the queue\n";
   _queue.push_back(std::move(msg));
   _cond.notify_one(); // notify client after pushing new Vehicle into vector
 }
-*/
 
 /* Implementation of class "TrafficLight" */
 
